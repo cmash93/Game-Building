@@ -17,21 +17,32 @@ function playGame() {
 
     if 
     (userSelection === compMove) {
+        results.ties++;
         window.alert("It's a tie!")
     }
     
     else if
     ((userSelection === "R" && compMove === "S") || (userSelection === "S" && compMove === "P") || (userSelection === "P" && compMove === "R")) {
+        results.wins++;
         window.alert("You win!")
     }
 
-    else
-    (window.alert("You lose!"))
+    else {
+    window.alert("You lose!");
+    results.losses++;
+    }
+
+    results.numGames++;
+    window.alert("Results: " + " Wins: " + results.wins + " | Losses: " + results.losses + " | Ties: " + results.ties + " | Number of Games: " + results.numGames)
+
+    var playAgain = window.confirm("Would you like to play again?")
+    
+    if (playAgain) {
+        playGame()
+    }
+    
 }
 
 
-function playAgain() {
-    window.confirm("Would you like to play again?")
-}
 
 playGame()
