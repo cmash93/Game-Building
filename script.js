@@ -10,6 +10,9 @@ var results = {
 function playGame() {
     var userSelection = window.prompt("Please enter R[🪨], P[📃], or S[✂️].");
     window.alert("User chose " + userSelection);
+      
+    //added to fix bug would lose every game with lowercase input below changes all user input to upper case
+     userSelection = userSelection.toUpperCase();
 
     // write something where they have to choose something
 
