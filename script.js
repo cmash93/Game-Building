@@ -11,9 +11,14 @@ function playGame() {
     var userSelection = window.prompt("Please enter R[🪨], P[📃], or S[✂️].");
     window.alert("User chose " + userSelection);
 
+    // write something where they have to choose something
+
+    userSelection = userSelection.toUpperCase();
+
+    
     var compSelection = Math.floor(Math.random() * options.length);
     var compMove = options[compSelection]
-    window.alert(compMove);
+    window.alert("Computer chose " + compMove);
 
     if 
     (userSelection === compMove) {
@@ -40,6 +45,8 @@ function playGame() {
     if (playAgain) {
         playGame()
     }
+
+
     
 }
 
