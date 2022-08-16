@@ -14,10 +14,6 @@ function playGame() {
     //added to fix bug would lose every game with lowercase input below changes all user input to upper case
      userSelection = userSelection.toUpperCase();
 
-    // write something where they have to choose something
-
-    userSelection = userSelection.toUpperCase();
-
     
     var compSelection = Math.floor(Math.random() * options.length);
     var compMove = options[compSelection]
